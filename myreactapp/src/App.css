@@ -28,6 +28,48 @@
   color: #61dafb;
 }
 
+.bold-text{
+  font-weight: bold;
+}
+
+.center-text{
+  text-align: center;
+}
+
+.social-media{
+  color: rgb(105, 105, 187);
+  background-color: aliceblue;
+  border-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10 px;
+}
+
+#backgroundcolor{
+  background-color: rgb(247, 241, 167);
+}
+
+
+.border{
+  border-style: solid;
+  border-color:rgb(27, 27, 58);
+  border-width: .12cm;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+#highlight{
+  background-color: lightblue;
+}
+
+.header{
+  font-weight: bold;
+  text-align: center;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
