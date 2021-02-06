@@ -1,24 +1,39 @@
 import { render } from "@testing-library/react";
+import numberOfFans from "../numberOfFans";
 
 class Newfan extends Component{
     constructor(props){
       super(props)
-      this.state = {fanStatus: ''};
-  
+      this.state = {updated: false};
+      this.state = {number : 0};
     }
   
 
   changeState = () => {
-    this.setState({fanStatus: 'I AM A FAN!'})
+    this.setState({number: number + 1})
   }
+
+
+  badNews = () => {
+    this.setState({number: number -1 })
+  }
+
+  changeNumber = () => {
+    thiis.setState({updated: true})
+  }
+
+
 
   render() {
       return(
 
         <div>
             <h3>Are you a fan of the work?</h3>
-            <button onClick = {this.changeState}>CLICK HERE!</button>
+            <numberOfFans onClick = {this.changeState, this.changeNumber}>YES CLICK HERE!</numberOfFans>
+            <numberOfFans onClick = {this.badNews, this.changeNumber}>NO CLICK HERE!</numberOfFans>
         </div>
       )
   }
 }
+
+export default Newfan;

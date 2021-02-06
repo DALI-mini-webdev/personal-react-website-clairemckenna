@@ -37,6 +37,18 @@
   font-weight: bold;
 }
 
+.image-height{
+  width: 400;
+  height: 500;
+}
+
+.numberOfFans{
+  color: light rgb(77, 155, 207);
+  font-weight: bold;
+  border: rgb(180, 80, 172);
+
+}
+
 .center-text{
   text-align: center;
 }
