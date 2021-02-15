@@ -1,27 +1,30 @@
+import React, { Component } from 'react';
 import { render } from "@testing-library/react";
-import numberOfFans from "../numberOfFans";
+import numberOfFans from "./numberOfFans";
+import {Component} from 'react';
 
-class Newfan extends Component{
+
+class Newfan extends Component {
     constructor(props){
       super(props)
-      this.state = {updated: false};
-      this.state = {number : 0};
+      this.state = { 
+        number: 0
+      };
     }
   
 
-  changeState = () => {
-    this.setState({number: number + 1})
+  changeState = (number) => {
+    this.setState({
+      number: this.state.number + 1
+    });
   }
 
 
-  badNews = () => {
-    this.setState({number: number -1 })
+  badNews = (number) => {
+    this.setState({
+      number: this.state.number - 1 
+    });
   }
-
-  changeNumber = () => {
-    thiis.setState({updated: true})
-  }
-
 
 
   render() {
@@ -29,8 +32,9 @@ class Newfan extends Component{
 
         <div>
             <h3>Are you a fan of the work?</h3>
-            <numberOfFans onClick = {this.changeState, this.changeNumber}>YES CLICK HERE!</numberOfFans>
-            <numberOfFans onClick = {this.badNews, this.changeNumber}>NO CLICK HERE!</numberOfFans>
+            <li><numberOfFans onClick = {this.changeState}>YES CLICK HERE!</numberOfFans></li>
+            
+            <li><numberOfFans onClick = {this.badNews}>NO CLICK HERE!</numberOfFans></li>
         </div>
       )
   }

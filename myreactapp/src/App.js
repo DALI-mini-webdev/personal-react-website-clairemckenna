@@ -1,8 +1,10 @@
 
+import { render } from '@testing-library/react';
 import React from 'react';
-import './App.css';
 import Navbar from "./components/Navbar/Navbar";
 import Newfan from './Newfan.js'
+import './App.css';
+
 
 function App() {
 
@@ -11,14 +13,18 @@ function App() {
 
 const instabuttonFunction = () => {  //learned on stack overflow 
   <input type="button" value="button name" onClick="window.open('https://www.instagram.com/siennahendo/')" /> 
-  console.log("Someone viewed Sienna's Instagram ")
+  console.log("Someone viewed Sienna's Instagram ");
+  console.log(target.value);
 }
 
 
 const linkedinButtonFunction = () =>  {
   <input type="button" value="button name" onClick="window.open('https://www.linkedin.com/in/siennahenderson/')" /> 
-  console.log("Someone viewed Sienna's LinkedIn")
+  console.log("Someone viewed Sienna's LinkedIn");
+  console.log(target.value);
 }
+
+
 
 
 
@@ -59,7 +65,6 @@ return(
 
 </div>
 
-<h3>Click below if you are her fan!</h3>
 <p>
   <Newfan />
   </p>

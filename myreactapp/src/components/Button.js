@@ -1,11 +1,11 @@
 
+import { render } from '@testing-library/react'
 import React from 'react'
 import './Button.css'
 
 const STYLES = [
     'btn--primary',
     'btn--outline'
-
 ]
 
 const SIZES = [
@@ -21,15 +21,14 @@ export const Button =({
         buttonSize
 }) => {
 
-    const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : 
-    STYLES[0]
+    const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0]
 
-    const checkButtonSize = SIZES.include(buttonSize) ? buttonSize: SIZES[0]
-}
+    const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize: SIZES[0]
 
-return(
-    <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} 
-    onClick={onClick} type={type}>
+    return(
+        <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
+        
+        {children}</button>
     
-    {children}</button>
-)
+    )
+}
