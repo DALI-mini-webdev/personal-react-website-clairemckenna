@@ -4,28 +4,27 @@ import React from 'react';
 import Navbar from "./components/Navbar/Navbar";
 import Newfan from './Newfan.js'
 import './App.css';
+import firebase from './firebase/index'
+import funFact from './components/funFact'
 
 
 function App() {
 
-
-  
+  console.log(firebase);
+  console.log(firebase.db);
 
 const instabuttonFunction = () => {  //learned on stack overflow 
   <input type="button" value="button name" onClick="window.open('https://www.instagram.com/siennahendo/')" /> 
   console.log("Someone viewed Sienna's Instagram ");
-  console.log(target.value);
+
 }
 
 
 const linkedinButtonFunction = () =>  {
   <input type="button" value="button name" onClick="window.open('https://www.linkedin.com/in/siennahenderson/')" /> 
   console.log("Someone viewed Sienna's LinkedIn");
-  console.log(target.value);
+  
 }
-
-
-
 
 
 
@@ -54,7 +53,7 @@ return(
     <img className = "image-height" src="./pic3.jpg" />
     <img className = "image-height" src="./pic4.jpg" />
 
-    <h3 className = "underline">You can find more information about Sienna through her various social media platforms
+    <h3 className = "underline" >You can find more information about Sienna through her various social media platforms
         linked below:</h3>
 
     <li> <button className = "social-media" onClick = {linkedinButtonFunction}>LinkedIn</button>
@@ -68,6 +67,9 @@ return(
 <p>
   <Newfan />
   </p>
+
+  <funFact />
+
 
       
     </div>);

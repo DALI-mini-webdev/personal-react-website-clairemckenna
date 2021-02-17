@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from "@testing-library/react";
 import numberOfFans from "./numberOfFans";
-import {Component} from 'react';
+
 
 
 class Newfan extends Component {

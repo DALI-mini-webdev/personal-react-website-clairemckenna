@@ -1,0 +1,8 @@
+
+.questionStyle{
+    width: 10 px;
+    height: 10px;
+    background-color: ghostwhite;
+    border: black;
+    background-origin: padding-box;
+}
